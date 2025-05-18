@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGODB_URI=mongodb+srv://goldeneducation786:nELPDRLW1CQbo96A@cluster0.nah9oyp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - NEXT_PUBLIC_API_URL=http://localhost:3000
+    # Optional: Uncomment if you want live reload and syncing with local files (dev)
+    # volumes:
+    #   - ./:/usr/src/app
+    command: npm start
